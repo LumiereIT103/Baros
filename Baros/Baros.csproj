@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="9.0.0" />
+    <PackageReference Include="MySqlConnector" Version="2.3.7" />
     <PackageReference Include="ReaLTaiizor" Version="3.8.0.7" />
   </ItemGroup>
 

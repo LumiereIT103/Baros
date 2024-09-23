@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Baros
 {
@@ -25,20 +26,26 @@ namespace Baros
 
         private void signin_Btn_Click(object sender, EventArgs e)
         {
-            string username = cNum_tb.Text; 
-            string password = pass_tb.Text; 
+            string username = cNum_tb.Text;
+            string password = pass_tb.Text;
 
-        
+
             if (IsValidUsername(username) && IsValidPassword(password))
             {
-                MessageBox.Show("Login successful!");
-                
+                LoggedinUser.uname = cNum_tb.Text;
+                Home dB = new Home();
+                dB.Show();
+                this.Hide(); 
+
             }
             else
             {
                 MessageBox.Show("Invalid username or password. Please try again.");
             }
+
+            
         }
+        
 
         private void exit_Click(object sender, EventArgs e)
         {

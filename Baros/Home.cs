@@ -24,7 +24,7 @@ namespace Baros
 
         private void Home_Load(object sender, EventArgs e)
         {
-
+            label1.Text = "Welcome, " + LoggedinUser.uname;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
